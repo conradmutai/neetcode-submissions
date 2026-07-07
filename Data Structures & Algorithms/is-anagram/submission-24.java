@@ -1,0 +1,19 @@
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        HashMap<Character, Integer> charMap1 = new HashMap<>();
+        HashMap<Character, Integer> charMap2 = new HashMap<>();
+
+        for (char c : s.toCharArray()) {
+            charMap1.put(c, charMap1.getOrDefault(c, 0) + 1);
+        }
+        for (char c : t.toCharArray()) {
+            charMap1.put(c, charMap1.getOrDefault(c, 0) + 1);
+        }
+
+        if(charMap1.equals(charMap2)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
